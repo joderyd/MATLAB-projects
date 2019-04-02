@@ -1,4 +1,4 @@
-function Ms = moving(infil, elev)
+function Ms = moving(inputSound, elev)
 
 %   infil = ljudfil som ska cirkulera (mono!). infil måste se ut som t.ex. 'infil.wav'
 %   elev = höjden som ljudet ska cirkulera kring. anges i tiota
@@ -16,7 +16,7 @@ fs = 44100;
 %X = [XI(:,1)+XI(:,2)]*0.5;   %gör om ljudet till 1 kanal
 
 
-[X, fs] = audioread('infil.wav');
+[X, fs] = audioread(inputSound);
 lenx = floor(length(X)/361)-1;    %lenx = längd på varje del.
 Ms = [];
 
